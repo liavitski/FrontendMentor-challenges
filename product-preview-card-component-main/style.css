@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-component {
+  width: 800px;
+  display: flex;
+  border-radius: 10px;
+  margin: 250px auto;
+  overflow: hidden;
+}
+
+.image-hero {
+  width: 400px;
+}
+
+.card-info {
+  background-color: var(--white);
+  padding: 10px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.title {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  color: var(--dark-grayish-blue);
+}
+
+.header {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 45px;
+  color: var(--very-dark-blue);
+}
+
+.description {
+  font-size: 18px;
+  color: var(--dark-grayish-blue);
+  line-height: 26px;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+}
+
+.current-price {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  color: var(--dark-cyan);
+  font-size: 42px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  position: absolute;
+  right: 70px;
+  color: var(--dark-grayish-blue);
+}
+
+.btn {
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.btn:hover {
+  background-color: var(--very-dark-blue);
+}
+
+.cart-img {
+  width: 18px;
+}
+
+.add-to-cart {
+  margin-left: 10px;
+}
+
+/* Screen 375px */
+
+@media screen and (max-width: 480px) {
+  .card-component {
+    flex-direction: column;
+    width: 345px;
+    margin: 25px auto;
+  }
+
+  .image-hero {
+    content: url('images/image-product-mobile.jpg');
+  }
+
+  .card-info {
+    padding: 25px 25px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
+
+  .header {
+    font-size: 32px;
+    line-height: 35px;
+  }
+
+  .description {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+    line-height: 20px;
+  }
+
+  .card-info > * {
+    margin: 5px 0;
+  }
+}
